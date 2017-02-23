@@ -36,9 +36,9 @@ public class MicroServicesLab1Application extends SpringBootServletInitializer {
 		
 		team.setPlayers(players);
 		players.add(new Player(new Long(1), "Bilgin", "Ertas", "Forward"));
-		players.add(new Player(new Long(2), "Hasan", "Şaş", "Forward"));
-		players.add(new Player(new Long(3), "George", "Hagi", "Middle"));
-		players.add(new Player(new Long(4), "Bülent", "Korkmaz", "Defence"));
+		players.add(new Player(new Long(1), "Hasan", "Şaş", "Forward"));
+		players.add(new Player(new Long(1), "George", "Hagi", "Middle"));
+		players.add(new Player(new Long(1), "Bülent", "Korkmaz", "Defence"));
 		
 		teams.add(team);
 

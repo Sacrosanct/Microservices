@@ -15,32 +15,32 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 
 
-@Entity
 @XmlRootElement
+@Entity
 public class Player {
 	
 	@Id @GeneratedValue
 	private Long id;
 	
-	@XmlElement
+	private Long teamId;
+	
 	private String name;
 	
-	@XmlElement
 	private String surname;
 	
-	@XmlElement
 	private String position;
 
 	public Player() {
 		super();
 	}
 
-	public Player(Long id, String name, String surname, String position) {
-		this.id = id;
+	public Player(Long teamId, String name, String surname, String position) {
+		this.teamId = teamId;
 		this.name = name;
 		this.surname = surname;
 		this.position = position;
 	}
+	
 
 	public Long getId() {
 		return id;
@@ -48,6 +48,14 @@ public class Player {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public Long getTeamId() {
+		return teamId;
+	}
+
+	public void setTeamId(Long teamId) {
+		this.teamId = teamId;
 	}
 
 	public String getName() {

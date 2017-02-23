@@ -18,20 +18,20 @@ import javax.xml.bind.annotation.XmlType;
  * @author Bilgin
  *
  */
-@Entity
 @XmlRootElement
-@XmlType(propOrder = { "id", "name", "location", "mascotte" })
+@Entity
 public class Team {
 	
 	@Id @GeneratedValue
 	private long id;
 	private String name,location,mascotte;
 	
-	@OneToMany(cascade=CascadeType.ALL) @JoinColumn(name="id")
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="teamId")
 	private Set<Player> players;
 	
 	public Team(){
-		
+		super();
 	}
 	
 	public Team(long id, String name, String location, String mascotte, Set<Player> players) {
